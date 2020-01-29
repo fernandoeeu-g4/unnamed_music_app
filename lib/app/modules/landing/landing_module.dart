@@ -1,6 +1,8 @@
+import 'package:my_music_app/app/modules/home/home_module.dart';
 import 'package:my_music_app/app/modules/landing/landing_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:my_music_app/app/modules/landing/landing_page.dart';
+import 'package:my_music_app/app/modules/signin/signin_module.dart';
 
 class LandingModule extends ChildModule {
   @override
@@ -11,6 +13,8 @@ class LandingModule extends ChildModule {
   @override
   List<Router> get routers => [
         Router('/', child: (_, args) => LandingPage()),
+        Router('/home', module: HomeModule()),
+        Router('/signin', module: SigninModule())
       ];
 
   static Inject get to => Inject<LandingModule>.of();

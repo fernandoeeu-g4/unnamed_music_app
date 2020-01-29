@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:hive/hive.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -16,7 +18,16 @@ class _HomePageState extends State<HomePage> {
         title: Text(widget.title),
       ),
       body: Column(
-        children: <Widget>[],
+        children: <Widget>[
+          Center(
+            child: RaisedButton(
+              onPressed: () {
+                Hive.box('user').put('isLogged', false);
+                Modular.to.pushReplacementNamed('/signin');
+              },
+            ),
+          )
+        ],
       ),
     );
   }

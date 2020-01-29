@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 
 class LandingPage extends StatefulWidget {
   final String title;
@@ -9,15 +10,23 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
+  final userBox = Hive.box('user');
+  bool initialized = false;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Column(
-        children: <Widget>[],
-      ),
-    );
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      // print(userBox.get('isLogged', defaultValue: false));
+      if (!initialized) {
+        if (!userBox.get('isLogged', defaultValue: false)) {
+          Navigator.pushReplacementNamed(context, '/signin');
+        } else {
+          Navigator.pushReplacementNamed(context, '/home');
+        }
+        setState(() {
+          initialized = true;
+        });
+      }
+    });
+    return Scaffold();
   }
 }

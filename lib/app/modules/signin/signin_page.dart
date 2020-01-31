@@ -118,7 +118,7 @@ class _SigninPageState extends State<SigninPage> {
               ValueListenableBuilder(
                 valueListenable: userBox.listenable(),
                 builder: (BuildContext context, box, _) {
-                  return box.get('signinLoading')
+                  return box.get('signinLoading', defaultValue: false)
                       ? LoadingAnimationWidget(
                           height: _screenHeight,
                           width: _screenWidth,

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "745582405007-tgb4588fao95ale1ub2c2374fpnhbu70.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fernando.my_music_app",
+            "certificate_hash": "e7c5441a6a39e848110405a6159ff980344099c3"
+          }
+        },
+        {
           "client_id": "745582405007-5tled3hunb6ddkmjf3n705ppd6d8r6p6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

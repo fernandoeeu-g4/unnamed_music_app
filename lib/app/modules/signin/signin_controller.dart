@@ -70,7 +70,9 @@ abstract class _SigninBase with Store {
   }
 
   bool _saveUserData(UserData user) {
+    print(user);
     userBox.put('user', user);
+    userBox.put('isLogged', true);
     return true;
   }
 }

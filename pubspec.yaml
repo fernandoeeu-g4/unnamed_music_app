@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  cached_network_image: ^2.0.0
   skeleton_text: ^1.0.0
   jiffy: ^2.2.0
   flutter_spinkit: ^4.1.1+1

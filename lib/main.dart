@@ -19,6 +19,9 @@ Future main() async {
   runApp(
     MaterialApp(
       // navigatorKey: Modular.navigatorKey,
+      theme: ThemeData(
+        fontFamily: 'Montserrat'
+      ),
       darkTheme: ThemeData.dark().copyWith(
           primaryColorDark: Colors.red,
           accentColor: Colors.red,

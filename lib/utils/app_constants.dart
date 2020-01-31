@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class AppConstants {
-  static const String adonis_url = 'https://553637bb.ngrok.io';
+  static const String adonis_url = 'https://0df1a2f6.ngrok.io';
 
 
   // colors
